@@ -4,6 +4,7 @@ import schema from "./schema";
 import { connect } from "./database";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import cors from 'cors';
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
   })
 });
 
+app.use(cors());
 app.use('/graphql', graphqlHTTP({
   graphiql: true,
   schema: schema,

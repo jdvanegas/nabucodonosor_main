@@ -12,19 +12,19 @@ const query = `
 
 const Service = {
   up: {
-    url: 'http://nabuco-up.eastus.azurecontainer.io:8000/graphql',
+    url: 'http://34.68.168.208:8000/graphql',
     query: query
   },
   left: {
-    url: 'http://nabuco-left.eastus.azurecontainer.io:8000/graphql',
+    url: 'http://34.68.168.208:8002/graphql',
     query: query
   },
   right: {
-    url: 'http://nabuco-right.eastus.azurecontainer.io:8000/graphql',
+    url: 'http://34.68.168.208:8003/graphql',
     query: query
   },
   down: {
-    url: 'http://nabuco-down.eastus.azurecontainer.io:8000/graphql',
+    url: 'http://34.68.168.208:8001/graphql',
     query: query
   },
 }
