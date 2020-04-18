@@ -31,6 +31,10 @@ export const resolvers = {
       movements = movements.sort((a, b) => new Date(b.created) - new Date(a.created));
 
       return movements;
+    },
+    async Cart() {
+      let cart = await Cart.findOne({ 'code': 'nabucodonosor-001' });
+      return cart;
     }
   },
   Mutation: {

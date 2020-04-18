@@ -6,6 +6,7 @@ const typeDefs = `
 
   type Query {
     Movements: [Movement]
+    Cart: Cart
   }
 
   type Movement {

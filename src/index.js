@@ -5,6 +5,7 @@ import { connect } from "./database";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
+const PORT = process.env.PORT || 8000;
 const app = express();
 connect();
 
@@ -24,4 +25,4 @@ app.use('/graphql', graphqlHTTP({
   }
 }));
 
-app.listen(3000, () => console.log('Server on port 3000'));
+app.listen(PORT, () => console.log('Server on port ' + PORT));
